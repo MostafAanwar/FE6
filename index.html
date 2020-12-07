@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="js/script.js" defer></script>
+    <title>Document</title>
+    <button
+      type="button"
+      name="dark_light"
+      onclick="toggleDarkLight()"
+      id="btntxt"
+      title="Toggle dark/light mode"
+    >
+      🌛
+    </button>
+  </head>
+  <header>
+    <div class="header">
+      <input type="checkbox" id="chk" />
+      <label for="chk" class="show-menu-btn">
+        <i class="fas fa-ellipsis-h"></i>
+      </label>
+      <ul class="menu" id="menu">
+        <a href="#about">About</a>
+        <a href="#api">API</a>
+        <a href="#contact">Contact</a>
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label>
+      </ul>
+    </div>
+  </header>
+  <body class="dark-mode" id="cls">
+    <div class="aboutMe" id="about">
+      <h2>About Me</h2>
+      <p>
+        My name is Mostafa Anwar. I started studying computer Science at Cairo
+        University in 2016. I have interests in technology, tennis and video
+        games. In early 2018 I won 3rd place in Emirates NBD innovation program.
+        In early 2019 I was chosen in best top 30 students among arab countries
+        to get a Front-End Nano degree and now in july 2019 I have finished it
+        being one of the top 30 in my cohort.
+      </p>
+    </div>
+    <div class="api" id="api">
+      <h2>API</h2>
+      <div id="joke-container">
+        <h1>Dad Jokes</h1>
+        <div id="joke-display">
+          <div id="joke-text" class="hidden"></div>
+          <div id="joke-controls">
+            <button id="joke-control-random" class="btn btn-secondary">
+              Random joke
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="api2" id="api2">
+      <div id="fb-root"></div>
+      <script
+        async
+        defer
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"
+      ></script>
+      <div class="poke">
+        <img class="card" />
+        <p class="pokiname">NAME:</p>
+        <p class="type">TYPE:</p>
+        <p class="hp">HP:</p>
+        <p class="weakness">WEAKNESS:</p>
+      </div>
+    </div>
+    <div class="contact-section" id="contact">
+      <div class="inner-width">
+        <h1 id="h1Cs">Get in touch with me</h1>
+        <form name="myForm" onsubmit="return false">
+          <input
+            type="text"
+            placeholder="Enter your name"
+            id="name"
+            class="name"
+          />
+          <br /><br />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="email"
+            id="email"
+          />
+          <br /><br />
+          <input
+            type="number"
+            placeholder="Enter your phone"
+            class="phone"
+            id="phone"
+          />
+          <br /><br />
+          <span>What is your message?</span>
+          <br />
+          <textarea
+            class="message"
+            id="message"
+            rows="7"
+            cols="40"
+            placeholder="your message"
+          ></textarea>
+          <br /><br />
+          <button onclick="sendContact();">Send message</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
